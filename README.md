@@ -22,3 +22,14 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+This is part of the [Forms Project](https://www.theodinproject.com/lessons/ruby-on-rails-forms) in The Odin Project.
+
+===
+bin/rails g model User username:string email:string password:string
+add validations
+creates :users resource
+bin/rails g controller Users new create
+bin/rails db:migrate
+===
+
