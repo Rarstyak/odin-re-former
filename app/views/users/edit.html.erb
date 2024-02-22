@@ -1,0 +1,28 @@
+<h1>Users#edit</h1>
+<p>Find me in app/views/users/edit.html.erb</p>
+
+<%= form_with model: @user do |form| %>
+
+  <% if @user.errors.any? %>
+    <div id="errors">
+      <h2><%= pluralize(@user.errors.count, "error")%> were found</h2>
+
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.label :username, "Username:" %>
+  <%= form.text_field :username %>
+  <br>
+  <%= form.label :email, "Email:" %>
+  <%= form.email_field :email %>
+  <br>
+  <%= form.label :password, "Password:" %>
+  <%= form.password_field :password %>
+  <br>
+  <%= form.submit "Update" %>
+<% end %>
